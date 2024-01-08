@@ -8,7 +8,7 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class VynilController extends AbstractController
 {
-    #[Route("/")]
+    #[Route("/", name: 'app_home')]
     public function homepage()
     {
         return $this->render(
@@ -28,7 +28,7 @@ class VynilController extends AbstractController
         );
     }
 
-    #[Route("/browse/{genre}")]
+    #[Route("/browse/{genre}", name: 'app_browse')]
     public function browse(string $genre = null)
     {
         if ($genre) {
