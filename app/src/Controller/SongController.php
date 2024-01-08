@@ -14,7 +14,7 @@ class SongController extends AbstractController
         return $this->json([
             'id' => $id,
             'name' => 'Waterfalls',
-            'url' => ''
+            'url' => 'https://symfonycasts.s3.amazonaws.com/sample.mp3',
         ], 200);
     }
 }
