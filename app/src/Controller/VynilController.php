@@ -11,20 +11,19 @@ class VynilController extends AbstractController
     #[Route("/", name: 'app_home')]
     public function homepage()
     {
+
+        $tracks = [
+            ['song' => 'Gangsta\'s Paradise', 'artist' => 'Coolio'],
+            ['song' => 'Waterfalls', 'artist' => 'TLC'],
+            ['song' => 'Creep', 'artist' => 'Radiohead'],
+            ['song' => 'Kiss from a Rose', 'artist' => 'Seal'],
+            ['song' => 'On Bended Knee', 'artist' => 'Boyz II Men'],
+            ['song' => 'Fantasy', 'artist' => 'Mariah Carey'],
+        ];
+
         return $this->render(
             "vynyl/homepage.html.twig",
-            ['tracks' => [
-                ['name' => 'aaa', 'artist' => 'bob marley'],
-                ['name' => 'aaa', 'artist' => 'bob marley'],
-                ['name' => 'aaa', 'artist' => 'bob marley'],
-                ['name' => 'aaa', 'artist' => 'bob marley'],
-                ['name' => 'aaa', 'artist' => 'bob marley'],
-                ['name' => 'aaa', 'artist' => 'bob marley'],
-                ['name' => 'aaa', 'artist' => 'bob marley'],
-                ['name' => 'aaa', 'artist' => 'bob marley'],
-                ['name' => 'aaa', 'artist' => 'bob marley'],
-                ['name' => 'aaa', 'artist' => 'bob marley'],
-            ]]
+            ['tracks' => $tracks]
         );
     }
 
