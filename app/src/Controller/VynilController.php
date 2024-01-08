@@ -6,23 +6,39 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
-class VynilController
+class VynilController extends AbstractController
 {
     #[Route("/")]
     public function homepage()
     {
-        return new Response("Welcome to my fancy vynil store!");
+        return $this->render(
+            "vynyl/homepage.html.twig",
+            ['tracks' => [
+                ['name' => 'aaa', 'artist' => 'bob marley'],
+                ['name' => 'aaa', 'artist' => 'bob marley'],
+                ['name' => 'aaa', 'artist' => 'bob marley'],
+                ['name' => 'aaa', 'artist' => 'bob marley'],
+                ['name' => 'aaa', 'artist' => 'bob marley'],
+                ['name' => 'aaa', 'artist' => 'bob marley'],
+                ['name' => 'aaa', 'artist' => 'bob marley'],
+                ['name' => 'aaa', 'artist' => 'bob marley'],
+                ['name' => 'aaa', 'artist' => 'bob marley'],
+                ['name' => 'aaa', 'artist' => 'bob marley'],
+            ]]
+        );
     }
 
-    #[Route("/browse/{slug}")]
-    public function browse(string $slug = null)
+    #[Route("/browse/{genre}")]
+    public function browse(string $genre = null)
     {
-        $title = "All genres";
-
-        if ($slug) {
-            $title = str_replace('-', ' ', $slug);
+        if ($genre) {
+            $genre = str_replace('-', ' ', $genre);
+        } else {
+            $genre = "All genres";
         }
 
-        return new Response($title);
+        return $this->render("vynyl/browse.html.twig", [
+            'genre' => $genre
+        ]);
     }
 }
