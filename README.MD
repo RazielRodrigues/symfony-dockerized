@@ -1,11 +1,10 @@
-# RUN AND GO SYMFONY STRUCTURE
+# SYMFONY HARMONIUS
 
-I created this structure because I spent 2 hours searching 
-for a way to easy dockerize a symfony application here is now!
+This repository hold my way through symfony 6 course by SymfonyCast.
 
 # GETTING STARTED
 
-docker compose up -d
+docker compose up -d or Symfony server:start
 
 # FEATURES
 
@@ -13,4 +12,9 @@ docker compose up -d
 - apache
 - mysql
 - composer
-- symfony cli
+- Symfony cli
+- Symfony 7
+
+https://symfonycasts.com/u/razielrodrigues/badges/133
+
+<img src="certificate.jpg">
