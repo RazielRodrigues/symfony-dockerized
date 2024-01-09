@@ -6,7 +6,7 @@ This repository hold my way through symfony 6 course by SymfonyCast.
 
 docker compose up -d or Symfony server:start
 
-# FEATURES
+# TECH STACK
 
 - php 8.2
 - apache
